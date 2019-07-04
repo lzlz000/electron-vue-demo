@@ -8,10 +8,9 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js",
-    "electron_run": "electron build/electron.js",
-    "electron_build": "npm run build && electron build/electron.js",
-    "electron_package": "electron-packager ./dist/ --win --out ./out_app --arch=x64  --electron-version=5.0.6 --asar"
+    "build": "node build/build.js && node build/copy.js",
+    "electron": "electron build/electron.js ../dist/index.html",
+    "package": "electron-packager ./dist/ --win --out ./out_app --arch=x64  --electron-version=5.0.6  --asar --overwrite"
   },
   "dependencies": {
     "vue": "^2.5.2",
