@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "\"\"",
   "author": "lz <lzlz0810@qq.com>",
+  "main": "electron.js",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -13,6 +14,9 @@
     "package": "electron-packager ./dist/ --win --out ./out_app --arch=x64  --electron-version=5.0.6  --asar --overwrite"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "sqlite3": "^4.0.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

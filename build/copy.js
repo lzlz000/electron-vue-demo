@@ -4,6 +4,5 @@ const fs = require( 'fs' )
 // console.log(data.toString())
 
 // fs.writeFileSync('dist/package.json',data);
-
-data = fs.readFileSync('build/electron.js');
-fs.writeFileSync('dist/index.js',data);
+fs.writeFileSync('dist/package.json',fs.readFileSync('package.json'));
+fs.writeFileSync('dist/electron.js',fs.readFileSync('build/electron.js'));
